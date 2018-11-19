@@ -1,6 +1,13 @@
 /* nejsme vcerejsi, pouzivame moderni box model */
-html { box-sizing: border-box; }
-*, ::after, ::before { box-sizing: inherit; }
+html {
+    box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+    box-sizing: inherit;
+}
 
 /*
  BARVY
@@ -24,10 +31,135 @@ body {
 }
 
 .obal {
-    width: 960px; /* obsah stránky je omezený do pruhu širokého 960px */
-    margin: 0 auto; /* pruh je na stránce vycentrovaný */
+    width: 960px;
+    /* obsah stránky je omezený do pruhu širokého 960px */
+    margin: 0 auto;
+    /* pruh je na stránce vycentrovaný */
     background: white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 /* ----- zde začni psát vlastní CSS ----- */
+
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    margin: 0 40px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.header-menu {
+    display: flex;
+}
+
+.header-menu a {
+    color: #25133d;
+    text-decoration: none;
+    padding: 15px 30px;
+    transition: background-color 250ms, color 250ms;
+}
+
+.header-menu a:hover {
+    background-color: #48418e;
+    color: #fff;
+}
+
+.jumbotron {
+    position: relative;
+    background: #48418e url('images/pozadi.jpg') no-repeat;
+    background-size: cover;
+    color: #fff;
+    padding: 60px 425px 60px 40px;
+}
+
+.jumbotron-title {
+    font-size: 90px;
+    font-weight: normal;
+    line-height: 1;
+}
+
+.jumbotron-desc {
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: 300;
+    margin: 50px 0;
+}
+
+.jumbotron-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.jumbotron-actions {
+    font-size: 20px;
+    display: flex;
+}
+
+.jumbotron-actions a {
+    border-radius: 8px;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 20px 30px;
+    text-decoration: none;
+    margin-right: 23px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    font-size: 20px;
+    line-height: 1;
+    transition: background-color 250ms;
+}
+
+.jumbotron-actions-main {
+    background-color: #48418e;
+}
+
+.jumbotron-actions a:hover {
+    background-color: #25133d;
+}
+
+
+.additionalContent {
+    display: flex;
+}
+
+.additionalContent-column {
+    flex: 1 1 calc(100% / 3);
+}
+
+.benefit {
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.benefit-icon {
+    width: 70px;
+}
+
+.benefit-title {
+    margin: 15px 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: #48418e;
+}
+
+.benefit-content {
+    text-align: center;
+    margin: 0;
+}
+
+.footer {
+    padding: 10px 40px;
+    font-size: 14px;
+    font-weight: 300;
+    background-color: #48418e;
+    color: #fff;
+    text-align: center;
+}
